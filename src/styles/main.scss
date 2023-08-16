@@ -25,17 +25,28 @@
         .box {
             background-color: #111111;
             position: absolute;
-            width: 100vw;
+            width: calc(100%);
             top: -589px;
             left: 0%;
             height: 90vh;
-            transform: rotate(20);
             transform: rotate(-16deg);
             align-items: flex-end;
             border: 20px solid white;
             border-radius: 25px;
             color: white;
             display: flex;
+
+            @media only screen and (max-width: 960px) {
+                position: relative;
+                transform: rotate(0);
+                border-radius: 0;
+                display: flex;
+                justify-content: center;
+                border: 0;
+                border-bottom: 20px solid white;
+                padding-top: 300px;
+            }
+
 
             .kiri {
                 color: #00FF00;
